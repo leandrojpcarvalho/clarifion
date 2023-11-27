@@ -1,5 +1,5 @@
 .benefits{
-  background-color: black;
+  background-color: #252f3d;
 
   color: aliceblue;
   display: flex;
@@ -20,4 +20,14 @@
   gap: 10px;
   justify-content: center;
   align-items: center;
+}
+
+.header-logo{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px;
+  &>div{
+    display: flex;
+    gap: 20px;
+  }
 }
