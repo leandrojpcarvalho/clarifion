@@ -30,12 +30,27 @@ const moves = {
 function Benefits() {
   const [benefits, setBenefits] = useState<Benefit[]>([]);
   const [showed, setShowed] = useState<Benefit[]>([]);
+  const [width, setWidth] = useState(window.innerWidth);
   const [position, setPosition] = useState(0);
 
   useEffect(() => {
     setBenefits(FAKE_FETCH);
     setShowed(sliceArray(FAKE_FETCH, position))
   }, []);
+
+  useEffect(() => {
+    if(width>400) {
+      setShowed(benefits)
+    } else {
+      setShowed(sliceArray(FAKE_FETCH, position))
+    }
+  },[benefits, width])
+
+  useEffect(()=>{
+    window.addEventListener('resize', () => {
+      setWidth(window.innerWidth);
+    })
+  })
 
   useEffect(() => {
     if(benefits.length !== 0) {

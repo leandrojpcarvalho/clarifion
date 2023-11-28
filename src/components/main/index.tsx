@@ -1,6 +1,8 @@
 import Status from './Status'
 import './styles.css'
 import product from '../../assets/product.svg'
+import check from '../../assets/tick-circle.svg';
+import percent from '../../assets/percent.svg'
 
 function Main() {
   return(
@@ -34,6 +36,26 @@ function Main() {
           </div>
         </div>
         <p>Simply plug a Clarifion into any standard outlet and replace bulky, expensive air purifiers with a simple.</p>
+        <div className='list'>
+            <div>
+              <img src={check} alt="" />
+              <p>Negative Ion Technology may <strong>help with allergens</strong></p>
+            </div>
+            <div>
+              <img src={check} alt="" />
+              <p>Designed for <strong>air rejuvenation</strong></p>
+            </div>
+            <div>
+              <img src={check} alt="" />
+              <p><strong>Perfect for every room</strong> in all types of places.</p>
+            </div>
+        </div>
+        <div>
+          <div className='discount'>
+            <img src={percent} alt="" />
+            <p>Save <span className='blue'>53%</span>  and get <span className='blue'>6 extra Clarifision</span> for only <span className='blue'>$14</span> Each.</p>
+          </div>
+        </div>
       </section>
     </>
   )
