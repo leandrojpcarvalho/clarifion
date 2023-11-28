@@ -53,7 +53,7 @@
 }
 
 .ok{
-  background-image: url(../../assets/check.svg);
+  background-image: url(../../assets/main/check.svg);
   background-repeat: no-repeat;
   border-color: transparent;
   color: transparent;
@@ -161,4 +161,50 @@
   display: flex;
   padding: 12px 16px;
   gap: 16px;
+}
+
+button{
+  background-color: #59AE43;
+  border-radius: 50px;
+  border: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+button:hover{
+  background-color: #229705;
+  transition: ease-in-out .15s;
+}
+
+.payment-info{
+  font-size: 12px;
+  color:  #4D5254;
+  text-transform: capitalize;
+  border: 1px solid #CFCFCF;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &>div{
+    display: flex;
+    padding: 8px 0 12px 0;
+    border-bottom: 1px solid #CFCFCF;
+    gap: 12px;
+    &>div{
+      display: flex;
+    }
+    &>div:nth-child(2){
+      border-left: 1px solid #CFCFCF;
+      padding-left: 12px;
+      gap: 8px;
+    }
+  }
 }

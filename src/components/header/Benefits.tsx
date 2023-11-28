@@ -39,33 +39,33 @@ function Benefits() {
   }, []);
 
   useEffect(() => {
-    if(width>400) {
+    if(width > 400) {
+      console.log(width,'>400')
       setShowed(benefits)
-    } else {
-      setShowed(sliceArray(FAKE_FETCH, position))
+    } else if(width <= 400) {
+      console.log('opa')
+      setShowed(sliceArray(benefits, position))
     }
-  },[benefits, width])
+  },[width])
 
   useEffect(()=>{
     window.addEventListener('resize', () => {
       setWidth(window.innerWidth);
     })
-  })
-
-  useEffect(() => {
-    if(benefits.length !== 0) {
-      setShowed(sliceArray(benefits, position));
-    }
-  }, [position])
+  },[])
 
   const handleClick = (direction: keyof typeof moves) => {
     const lastPosition = benefits.length - 1;
     if (position === lastPosition && direction ==='next') {
       setPosition(0);
+      setShowed(sliceArray(benefits, 0));
     } else if(position === 0 && direction === 'preview') {
       setPosition(lastPosition);
+      setShowed(sliceArray(benefits, lastPosition));
     } else {
-      setPosition(position + moves[direction]);
+      const newPosition = position + moves[direction]
+      setPosition(newPosition);
+      setShowed(sliceArray(benefits, newPosition));
     }
   };
 

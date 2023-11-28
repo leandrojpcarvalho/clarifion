@@ -1,9 +1,8 @@
+import mainImg from '../../assets/main';
 import Status from './Status'
 import './styles.css'
-import product from '../../assets/product.svg'
-import check from '../../assets/tick-circle.svg';
-import percent from '../../assets/percent.svg'
 
+mainImg
 function Main() {
   return(
     <>
@@ -17,7 +16,7 @@ function Main() {
       <section className='product'>
         <h2><span className='blue'>ONE TIME ONLY</span> special price for 6 extra Clarifion for only <span className='blue'>$14 each</span> ($84.00 total!)</h2>
         <div className='product-details'>
-          <div className='product-image'><img src={product} alt="" /></div>
+          <div className='product-image'><img src={mainImg.product} alt="" /></div>
           <div>
             <div className='product-more-details'>
               <p>Clarifion Air Ionizer</p>
@@ -38,22 +37,37 @@ function Main() {
         <p>Simply plug a Clarifion into any standard outlet and replace bulky, expensive air purifiers with a simple.</p>
         <div className='list'>
             <div>
-              <img src={check} alt="" />
+              <img src={mainImg.checklist} alt="" />
               <p>Negative Ion Technology may <strong>help with allergens</strong></p>
             </div>
             <div>
-              <img src={check} alt="" />
+              <img src={mainImg.checklist} alt="" />
               <p>Designed for <strong>air rejuvenation</strong></p>
             </div>
             <div>
-              <img src={check} alt="" />
+              <img src={mainImg.checklist} alt="" />
               <p><strong>Perfect for every room</strong> in all types of places.</p>
             </div>
         </div>
         <div>
           <div className='discount'>
-            <img src={percent} alt="" />
+            <img src={mainImg.percent} alt="" />
             <p>Save <span className='blue'>53%</span>  and get <span className='blue'>6 extra Clarifision</span> for only <span className='blue'>$14</span> Each.</p>
+          </div>
+        </div>
+        <button type="button">Yes - Claim my discount <img src={mainImg.arrow} alt="" /></button>
+        <div className="payment-info">
+          <div>
+            <div>
+              <p>Free shipping</p>
+            </div>
+            <div>
+                <img src={mainImg.lock} alt="" />
+              <p>Secure 256-bit SSL encryption</p>
+            </div>
+          </div>
+          <div>
+            <img src={mainImg.cards} alt="" />
           </div>
         </div>
       </section>
