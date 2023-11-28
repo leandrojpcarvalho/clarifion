@@ -1,3 +1,22 @@
+.product{
+  display: flex;
+  flex-direction: column;
+  margin: 24px 20px;
+  font-size: 14px;
+  gap: 24px;
+  &>h2{
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 140%;
+  }
+  &>p{
+    text-indent: 0cap;
+    text-align: center;
+    color: #4D5254;
+    font-size: 12px;
+    line-height: 140%;
+  }
+}
 .text{
   display: flex;
   flex-direction: column;
@@ -57,3 +76,62 @@
   color: transparent;
 }
 
+.strong{
+  font-weight: bold;
+}
+
+.blue{
+  color: #2C7EF8;
+}
+
+.product-details{
+  display: flex;
+  gap: 16px;
+  flex-flow: row nowrap;
+  &>div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    gap: 12px;
+  }
+}
+
+.input-radio{
+  display: flex;
+  gap: 16px;
+  font-weight: 300;
+  color: #37465A;
+}
+
+.product-image{
+  background-color: #2C7EF8;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-more-details{
+  display: flex;
+  justify-content: space-between;
+  &>div{
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+}
+
+.weak{
+  font-size: 10px;
+  color: #969696;
+  text-decoration: line-through;
+  font-weight: 600;
+}
+
+.emphases{
+  font-size: 14px;
+  font-weight: 600;
+  color: #2C7EF8;
+}

@@ -22,7 +22,7 @@ function Status() {
         return (
           <div key={statusNumber} >
             <div className={`status-number ${className}`}>{statusNumber}</div>
-            <p>{defaultStatus[statusNumber as keyof typeof defaultStatus]}</p>
+            <p className={ className === 'selected' ? 'strong' : ''}>{defaultStatus[statusNumber as keyof typeof defaultStatus]}</p>
           </div>
         )
       } )}
