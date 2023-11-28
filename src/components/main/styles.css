@@ -208,3 +208,18 @@ button:hover{
     }
   }
 }
+
+.link{
+  text-transform: uppercase;
+  color: #F82C2C;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.seal{
+  display: flex;
+  color: #4D5254;
+  font-size: 12px;
+  gap: 16px;
+}

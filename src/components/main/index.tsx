@@ -70,6 +70,13 @@ function Main() {
             <img src={mainImg.cards} alt="" />
           </div>
         </div>
+        <div className='link'>
+          <p >No thanks, I don’t want this.</p>
+        </div>
+        <div className='seal'>
+          <div><img src={mainImg.seal} alt="" /></div>
+          <p>If you are not completely thrilled with your Clarifion - We have a <strong>30 day satisfaction guarantee</strong>. Please refer to our return policy at the bottom of the page for more details. Happy Shopping!</p>
+        </div>
       </section>
     </>
   )
