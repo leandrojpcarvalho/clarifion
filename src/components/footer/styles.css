@@ -1,0 +1,20 @@
+footer{
+  background-color: #252F3D;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-size: 12px;
+  padding: 20px 0;
+  &>div{
+    display: flex;
+    gap: 12px;
+  }
+  &>div>div:nth-child(2){
+    text-transform: lowercase;
+    border-left: 1px solid white;
+    padding-left: 12px;
+  }
+}
