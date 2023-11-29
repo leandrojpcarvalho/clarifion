@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const defaultStatus = {
   '1':'Cart Review',
@@ -7,8 +7,13 @@ const defaultStatus = {
   '4':'Confirmation'
 };
 
+
 function Status() {
-  const [status, setState] = useState(3);
+  const [status, setState] = useState(0);
+
+  useEffect(() => {
+    setState(3)
+  }, []);
   
   return(
     <div className="status">
