@@ -50,7 +50,6 @@ header{
 
 @media screen and (min-width: 1500px) {
   .header-logo,.benefits{
-    margin: 0 128px;
     justify-content: space-between;
     max-width: var(--max-width);
     margin: 0 auto;
@@ -68,11 +67,12 @@ header{
 }
 
 @media screen and (max-width: 1499px )  {
+  .header
   .header-logo,.benefits{
-   margin: 0 128px;
-   max-width: var(--max-width-mobile);
-   min-width: var(--min-width-mobile);
-   margin: 0 auto;
+    padding: 10px 20px;
+    max-width: var(--max-width-mobile);
+    min-width: var(--min-width-mobile);
+    margin: 0 auto;
   }
   .logo>img{
     width: 107px;

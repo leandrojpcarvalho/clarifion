@@ -3,6 +3,11 @@ main{
 }
 
 @media screen and (min-width: 1500px )  {
+  header, footer{
+    margin: 0 128px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
   main{
    background-color: white;
    margin: 0 128px;
@@ -12,6 +17,11 @@ main{
 }
 
 @media screen and (max-width: 1499px )  {
+  header, footer{
+    max-width: var(--max-width-mobile);
+    min-width: var(--min-width-mobile);
+    margin: 0 auto;
+  }
   main{
    margin: 0 128px;
    max-width: var(--max-width-mobile);
