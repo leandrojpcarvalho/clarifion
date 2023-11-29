@@ -31,6 +31,9 @@
     flex-flow: column nowrap;
     align-items: center;
   }
+  &>div>p>span{
+    display: none;
+  }
 }
 .status-number{
   display: flex;
@@ -69,18 +72,21 @@
 
 .product{
   display: flex;
-  flex-direction: column;
-  margin: 24px 20px;
-  font-size: 14px;
-  gap: 24px;
-  &>h2{
+  &>div{
+    display: flex;
+    flex-direction: column;
+    margin: 24px 20px 0 20px;
+    font-size: 14px;
+    gap: 24px;
+  }
+  &>div>h2{
     text-transform: capitalize;
     text-align: center;
     line-height: 140%;
     font-size: 24px;
     font-weight: 400;
   }
-  &>p{
+  &>div>p{
     text-align: center;
     color: #4D5254;
     font-size: 12px;
@@ -196,17 +202,23 @@ button:hover{
   &>div{
     display: flex;
     padding: 8px 0 12px 0;
-    border-bottom: 1px solid #CFCFCF;
     gap: 12px;
     &>div{
       display: flex;
     }
     &>div:nth-child(2){
-      border-left: 1px solid #CFCFCF;
-      padding-left: 12px;
       gap: 8px;
     }
   }
+}
+
+.side-border{
+  border-left: 1px solid #CFCFCF;
+  padding-left: 12px;
+}
+
+.under-border{
+  border-bottom: 1px solid #CFCFCF;
 }
 
 .link{
@@ -222,4 +234,90 @@ button:hover{
   color: #4D5254;
   font-size: 12px;
   gap: 16px;
+  margin-bottom: 138px;
+}
+
+@media screen and (min-width: 1500px) {
+  .status{
+    justify-content: space-between;
+    &>div{
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    &>div>p>span{
+      display: inline;
+    }
+  }
+  .status-number{
+    font-size: 20px;
+    min-height: 42px;
+    min-width: 42px;
+    background-position: center;
+    background-size: cover;
+  }
+  .product{
+    background-color: #FAFAFA;
+    margin: 40px 0 60px 0;
+    padding: 40px;
+    gap: 40px;
+    &>div{
+      margin: 0;
+    }
+    &>div>img{
+      max-width: 575px;
+      flex-grow: 1;
+    }
+    &>div:nth-child(2){
+      &>h2{
+        text-align: left;
+        font-size: 32px;
+      }
+    }
+  }
+  .product-details{
+    &>div{
+      font-size: 20px;
+    }
+  }
+  .emphases{
+    font-size: 22px;
+  }
+  .weak{
+    font-size: 16px;
+  }
+  .seal{
+    margin-bottom: 0;
+  }
+  .input-radio{
+    &>label{
+      font-size: 16px;
+    }
+  }
+}
+
+
+.comments{
+  border-radius: 10px;
+  background-color: white;
+  max-width: 575px;
+  &>div{
+    padding: 24px;
+  }
+}
+.user{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 18px;
+  gap: 13px;
+}
+
+.info-user{
+  display: flex;
+  gap: 10px;
+  &>p{
+    color: #5BB59A;
+  }
 }

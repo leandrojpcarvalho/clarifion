@@ -6,6 +6,11 @@ import percent from './percent.svg';
 import checklist from './tick-circle.svg';
 import product from './product.svg';
 import seal from './seal.svg'
+import stars from './Stars.svg'
+import lockWhite from './lockWhite.svg';
+import product2 from './product2.svg';
+import verify from './verify.svg';
+import photo from './photo.svg';
 
 const mainImg = {
   arrow,
@@ -16,6 +21,11 @@ const mainImg = {
   checklist,
   product,
   seal,
+  stars,
+  lockWhite,
+  product2,
+  verify,
+  photo
 }
 
 export default mainImg;
