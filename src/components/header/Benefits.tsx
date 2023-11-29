@@ -71,7 +71,7 @@ function Benefits() {
               return (
                 <div key={offer} className="benefit">
                   <div><img src={image} alt="" /></div>
-                  <div>{offer}</div>
+                  <p>{offer}</p>
                 </div>
                 );
             })

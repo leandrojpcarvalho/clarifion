@@ -20,13 +20,13 @@ function Status() {
       {Object.keys(defaultStatus).map((statusNumber)=> {
         let className = ''
         if (status === Number(statusNumber)){
-          className = 'selected'
+          className = 'selected' 
         } else if(Number(statusNumber) < status) {
           className = 'ok'
         }
         return (
           <div key={statusNumber} >
-            <div className={`status-number ${className}`}>{statusNumber}</div>
+            <div className={`status-number ${className}`}>{ Number(statusNumber) >= status ? statusNumber : ''} </div>
             <p className={ className === 'selected' ? 'strong' : ''}> <span>{`Step ${statusNumber} : `}</span>{defaultStatus[statusNumber as keyof typeof defaultStatus]}</p>
           </div>
         )

@@ -1,9 +1,16 @@
+import { useEffect, useState } from 'react';
 import mainImg from '../../assets/main';
 import Status from './Status';
 import './styles.css';
 
 mainImg;
 function Main() {
+  const [input, setInput] = useState(false);
+
+  useEffect(() => {
+    setInput(true);
+  }, []);
+
   return (
     <>
       <section className="text">
@@ -88,10 +95,12 @@ function Main() {
               </div>
               <div className="input-radio">
                 <input
+                  checked={input}
+                  value='include'
                   type="radio"
-                  name="selected"
+                  name="include"
                 />
-                <label htmlFor="">12 left in Stock</label>
+                <label htmlFor="include">12 left in Stock</label>
               </div>
                 <p>
               Simply plug a Clarifion into any standard outlet and replace bulky,
