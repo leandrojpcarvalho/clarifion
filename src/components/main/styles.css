@@ -274,22 +274,70 @@ button:hover{
         text-align: left;
         font-size: 32px;
       }
+    &>div:nth-child(5){
+      display: flex;
+      gap: 12px;
+      flex-direction: column;
+    }
     }
   }
+
   .product-details{
+    &>div>p{
+      font-size: 16px;
+      color: #4D5254;
+    }
     &>div{
       font-size: 20px;
     }
   }
+
   .emphases{
     font-size: 22px;
   }
+
   .weak{
     font-size: 16px;
   }
+
+  .list{
+    &>div{
+      font-size: 16px;
+    }
+  }
+
+  .discount{
+    font-size: 16px;
+    align-items: center;
+  }
+
+  button{
+    font-size: 20px;
+  }
+
+  .payment-info{
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .under-border{
+    border-bottom: 0;
+  }
+
+  .side-border{
+    border-right: 1px solid #CFCFCF;
+    padding-right: 12px;
+  }
+
+  .link{
+    font-size: 18px;
+  }
+
   .seal{
     margin-bottom: 0;
+    font-size: 16px;
   }
+
   .input-radio{
     &>label{
       font-size: 16px;
@@ -301,9 +349,13 @@ button:hover{
 .comments{
   border-radius: 10px;
   background-color: white;
+  font-size: 16px;
   max-width: 575px;
   &>div{
     padding: 24px;
+    &>div>p{
+      color: #4D5254;
+    }
   }
 }
 .user{
@@ -316,8 +368,10 @@ button:hover{
 
 .info-user{
   display: flex;
+  font-size: 14px;
   gap: 10px;
   &>p{
+    font-size: 12px;
     color: #5BB59A;
   }
 }

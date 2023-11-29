@@ -93,12 +93,13 @@ function Main() {
                 />
                 <label htmlFor="">12 left in Stock</label>
               </div>
+                <p>
+              Simply plug a Clarifion into any standard outlet and replace bulky,
+              expensive air purifiers with a simple.
+            </p>
             </div>
           </div>
-          <p>
-            Simply plug a Clarifion into any standard outlet and replace bulky,
-            expensive air purifiers with a simple.
-          </p>
+
           <div className="list">
             <div>
               <img
@@ -141,31 +142,34 @@ function Main() {
               </p>
             </div>
           </div>
-          <button type="button">
-            Yes - Claim my discount{' '}
-            <img
-              src={mainImg.arrow}
-              alt=""
-            />
-          </button>
-          <div className="payment-info">
-            <div className="under-border">
-              <div>
-                <p>Free shipping</p>
-              </div>
-              <div className="side-border">
-                <img
-                  src={mainImg.lock}
-                  alt=""
-                />
-                <p>Secure 256-bit SSL encryption</p>
-              </div>
-            </div>
-            <div>
+          <div>
+
+            <button type="button">
+              Yes - Claim my discount{' '}
               <img
-                src={mainImg.cards}
+                src={mainImg.arrow}
                 alt=""
               />
+            </button>
+            <div className="payment-info">
+              <div className="under-border">
+                <div>
+                  <p>Free shipping</p>
+                </div>
+                <div className="side-border">
+                  <img
+                    src={mainImg.lock}
+                    alt=""
+                  />
+                  <p>Secure 256-bit SSL encryption</p>
+                </div>
+              </div>
+              <div>
+                <img
+                  src={mainImg.cards}
+                  alt=""
+                />
+              </div>
             </div>
           </div>
           <div className="link">
