@@ -211,6 +211,7 @@ button{
   background-color: #59AE43;
   border-radius: 50px;
   border: transparent;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;

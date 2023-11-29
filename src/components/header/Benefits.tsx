@@ -37,14 +37,6 @@ function Benefits() {
     setBenefits(FAKE_FETCH);
   }, []);
 
-  useEffect(() => {
-    if(width>=1500) {
-      setShowed(benefits)
-    } else {
-      setShowed(sliceArray(FAKE_FETCH, position))
-    }
-  },[width])
-
   useEffect(()=>{
     window.addEventListener('resize', () => {
       setWidth(window.innerWidth);
@@ -52,10 +44,12 @@ function Benefits() {
   }, []);
 
   useEffect(() => {
-    if(benefits.length !== 0 && width < 1500) {
-      setShowed(sliceArray(benefits, position));
+    if(width>=1500) {
+      setShowed(benefits)
+    } else {
+      setShowed(sliceArray(benefits, position))
     }
-  }, [position])
+  },[width, benefits, position])
 
   const handleClick = (direction: keyof typeof moves) => {
     const lastPosition = benefits.length - 1;
@@ -71,7 +65,7 @@ function Benefits() {
   return (
     <div className="container">
       <div className="benefits">
-        <div onClick={() => handleClick('preview')} aria-hidden={true} className={width >= 1500 ? 'hidden': ''}><img src={imgControl.preview} alt="preview" /></div>
+        <div onClick={() => handleClick('preview')} aria-hidden={true} className={width >= 1500 ? 'hidden': 'pointer'}><img src={imgControl.preview} alt="preview" /></div>
           {
             showed.map(({offer, image}) => {
               return (
@@ -82,7 +76,7 @@ function Benefits() {
                 );
             })
           }
-        <div onClick={() => handleClick('next')} aria-hidden={true} className={width >= 1500 ? 'hidden': ''}><img src={imgControl.next} alt="preview" /></div>
+        <div onClick={() => handleClick('next')} aria-hidden={true} className={width >= 1500 ? 'hidden': 'pointer'}><img src={imgControl.next} alt="preview" /></div>
       </div>
     </div>
   );  
