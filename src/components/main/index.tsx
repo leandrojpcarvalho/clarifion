@@ -14,7 +14,7 @@ function Main() {
         <Status />
       </section>
       <section className="product">
-        <div>
+        <div className="product-left" aria-hidden="true">
           <div>
 
           <img
@@ -59,7 +59,7 @@ function Main() {
             </div>
           </section>
         </div>
-        <div>
+        <div className="product-right">
           <h2>
             <span className="blue">ONE TIME ONLY</span> special price for 6
             extra Clarifion for only <span className="blue">$14 each</span>{' '}
@@ -99,7 +99,10 @@ function Main() {
             </p>
             </div>
           </div>
-
+          <p>
+              Simply plug a Clarifion into any standard outlet and replace bulky,
+              expensive air purifiers with a simple.
+            </p>
           <div className="list">
             <div>
               <img

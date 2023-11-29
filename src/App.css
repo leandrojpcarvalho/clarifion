@@ -10,3 +10,12 @@ main{
    margin: 0 auto;
   }
 }
+
+@media screen and (max-width: 1499px )  {
+  main{
+   margin: 0 128px;
+   max-width: var(--max-width-mobile);
+   min-width: var(--min-width-mobile);
+   margin: 0 auto;
+  }
+}

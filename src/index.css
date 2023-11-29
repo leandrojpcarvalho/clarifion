@@ -7,4 +7,6 @@
 
 :root {
   --max-width: 1245px;
+  --max-width-mobile: 600px;
+  --min-width-mobile: 360px;
 }
